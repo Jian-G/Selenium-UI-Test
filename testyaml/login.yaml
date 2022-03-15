@@ -1,0 +1,41 @@
+testinfo:
+      - id: test_login001
+        title: 登录测试
+        info: 打开抽屉首页
+testcase:
+      - element_info: login_btn
+        find_type: ID
+        operate_type: click
+        info: 打开登录对话框
+      - element_info: /html/body/div[4]/div/div[3]/div[1]/div[2]/input
+        find_type: XPATH
+        operate_type: send_keys
+        info: 输入手机号
+      - element_info: /html/body/div[4]/div/div[4]/div[1]/div/input[1]
+        find_type: XPATH
+        operate_type: send_keys
+        info: 输入密码
+      - element_info: /html/body/div[4]/div/div[4]/div[1]/div/img[1]
+        find_type: XPATH
+        operate_type: click
+        info: 单击显示密码按钮
+      - element_info: /html/body/div[4]/div/div[4]/div[4]/button
+        find_type: XPATH
+        operate_type: click
+        info: 单击登录按钮
+      - element_info: /html/body/div[1]/div/header/div/span
+        find_type: XPATH
+        operate_type: perform
+        info: 鼠标悬停账户菜单
+      - element_info: /html/body/div[1]/div/header/div/span/span/a[6]
+        find_type: XPATH
+        operate_type: click
+        info: 选择退出
+check:
+      - element_info: /html/body/div[4]/div/div[4]/div[3]/div[1]
+        find_type: XPATH
+        info: 检查输入手机号或密码，登录异常提示
+      - element_info: /html/body/div[1]/div/header/div/span/span/a[1]
+        find_type: XPATH
+        info: 显示用户名
+        
